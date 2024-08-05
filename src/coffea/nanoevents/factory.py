@@ -361,11 +361,12 @@ class NanoEventsFactory:
             )
         else:
             tree = uproot.open(file, **uproot_options)
-
+            print("Type of tree = uproot.open(file, **uproot_options): ", type(tree))
         if entry_start is None or entry_start < 0:
             entry_start = 0
         if entry_stop is None or entry_stop > tree.num_entries:
             entry_stop = tree.num_entries
+
 
         partition_key = (
             str(tree.file.uuid),
