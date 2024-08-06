@@ -124,7 +124,6 @@ class UprootSourceMapping(BaseSourceMapping):
     def _extract_base_form(cls, tree, iteritems_options={}):
         branch_forms = {}
         for key, branch in tree.iteritems(**iteritems_options):
-            print(f"[COFFEA] key: {key}, branch: {branch}")
             if key in branch_forms:
                 warnings.warn(
                     f"Found duplicate branch {key} in {tree}, taking first instance"
