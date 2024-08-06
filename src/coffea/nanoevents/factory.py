@@ -387,7 +387,6 @@ class NanoEventsFactory:
         base_form = mapping._extract_base_form(
             tree, iteritems_options=iteritems_options
         )
-        print("Base form debug: ", base_form)
 
         return cls._from_mapping(
             mapping,
