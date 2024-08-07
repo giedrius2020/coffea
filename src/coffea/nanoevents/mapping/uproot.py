@@ -136,6 +136,10 @@ class UprootSourceMapping(BaseSourceMapping):
                 continue
             if len(branch):
                 # The branch is split and its sub-branches will be enumerated by tree.iteritems
+                print("coffea/nanoevents/mapping/uproot.py: ",
+                      "Branch to be split: ",
+                      branch,
+                      sep="\n")
                 continue
             if isinstance(
                 branch.interpretation,
