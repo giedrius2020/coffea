@@ -166,6 +166,10 @@ class UprootSourceMapping(BaseSourceMapping):
                 )
                 continue
             branch_forms[key] = form
+        print("coffea/nanoevents/mapping/uproot.py:",
+              "tree.contents:", [item for item in branch_forms.values()],
+              "tree.title:", tree.title,
+              sep="\n")
         return {
             "class": "RecordArray",
             "contents": [item for item in branch_forms.values()],
